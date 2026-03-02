@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin | Dashboard</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        .admin-layout {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 2rem;
+            width: 95vw;
+            height: 90vh;
+        }
+
+        .stats-panel {
+            background: var(--card-bg);
+            border-radius: 20px;
+            border: 1px solid var(--glass-border);
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .controls {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .bar-container {
+            width: 100%;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+            margin-top: 0.5rem;
+            overflow: hidden;
+        }
+
+        .bar {
+            height: 24px;
+            background: var(--primary);
+            transition: width 0.3s ease;
+        }
+
+        .student-list {
+            list-style: none;
+            overflow-y: auto;
+        }
+
+        .student-item {
+            padding: 0.5rem;
+            border-bottom: 1px solid var(--glass-border);
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+
+<body style="align-items: center; justify-content: center;">
+    <div class="admin-layout animate-fade">
+        <aside class="stats-panel">
+            <h3>Estudiantes Conectados</h3>
+            <p id="student-count">Cargando...</p>
+            <ul id="student-list" class="student-list"></ul>
+            <button id="btn-export" style="margin-top: auto; background: #10b981;">Exportar CSV</button>
+        </aside>
+
+        <main class="content-card" style="min-height: auto;">
+            <h1 id="admin-slide-title">Control de Sesión</h1>
+            <p id="current-slide">Diapositiva Actual: 0</p>
+
+            <div id="admin-question-view" class="hidden" style="width: 100%; margin-top: 2rem;">
+                <h2 id="admin-question-text"></h2>
+                <div id="results-dashboard" style="margin-top: 1.5rem;"></div>
+            </div>
+
+            <div class="controls">
+                <button id="btn-prev" class="secondary">Anterior</button>
+                <button id="btn-next">Siguiente</button>
+                <button id="btn-toggle-q" style="background: #f59e0b;">Abrir Pregunta</button>
+            </div>
+        </main>
+    </div>
+
+    <script type="module" src="admin.js"></script>
+</body>
+
+</html>

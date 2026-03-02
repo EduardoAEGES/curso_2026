@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudiante | Interactive Class</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+
+<body>
+    <div id="login-view" class="glass-card animate-fade">
+        <h1>Unirse a la Clase</h1>
+        <p class="subtitle">Ingresa tu nombre para comenzar</p>
+        <div class="input-group">
+            <label for="student-name">Tu nombre</label>
+            <input type="text" id="student-name" placeholder="Ej. Juan Pérez">
+        </div>
+        <button id="btn-join">Ingresar</button>
+    </div>
+
+    <div id="class-view" class="slide-container hidden">
+        <div class="glass-card animate-fade" style="max-width: none;">
+            <div id="slide-content" class="content-card">
+                <h2 id="slide-title">Esperando al profesor...</h2>
+                <div id="question-area" class="hidden">
+                    <p id="question-text" style="font-size: 1.25rem; margin-bottom: 1rem;"></p>
+                    <div id="options-list" class="question-options"></div>
+                    <div id="open-response" class="hidden" style="width: 100%;">
+                        <textarea id="response-text" rows="4"
+                            style="width: 100%; background: rgba(0,0,0,0.2); border: 1px solid var(--glass-border); border-radius: 12px; color: white; padding: 1rem; margin-top: 1rem;"></textarea>
+                        <button id="btn-submit-text" style="margin-top: 1rem;">Enviar Respuesta</button>
+                    </div>
+                </div>
+                <div id="wait-message" class="hidden">
+                    <p>¡Respuesta enviada! Espera a la siguiente diapositiva.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="student.js"></script>
+</body>
+
+</html>
