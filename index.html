@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase Interactiva | Inicio</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .nav-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            margin-top: 2rem;
+            width: 100%;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="glass-card animate-fade">
+        <h1>Clase Interactiva</h1>
+        <p class="subtitle">Selecciona tu rol para comenzar</p>
+
+        <div class="nav-buttons">
+            <a href="student/index.html" class="nav-link">
+                <button style="background: var(--primary);">Soy Estudiante</button>
+            </a>
+            <a href="admin/index.html" class="nav-link">
+                <button style="background: #10b981;">Soy Profesor (Admin)</button>
+            </a>
+        </div>
+    </div>
+</body>
+
+</html>
